@@ -1,1 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f7f7f8;
+  color: #111;
+}
+
+header {
+  padding: 2rem;
+  text-align: center;
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+header p {
+  margin-top: 0.5rem;
+  color: #666;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.spot {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.spot h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.1rem;
+}
+
+.spot .address {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.spot .price {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #888;
+  font-size: 0.85rem;
+}
 
