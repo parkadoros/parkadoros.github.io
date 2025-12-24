@@ -3,7 +3,7 @@
     "name": "Parking ΔΕΘ-HELEXPO | Ιωάννης Βελλίδης",
     "address": "Λεωφ. 3ης Σεπτεμβρίου",
     "pricing": {
-      "hourly": [4,3,1],
+      "hourly": [4, 3, 1],
       "flatRate": 1
     },
     "lat": 40.625091,
@@ -12,13 +12,35 @@
   },
   {
     "name": "Parking ΔΕΘ-HELEXPO | Αγγελάκη",
-    "address": "Αγγελάκη 12",
+    "address": "Αγγελάκη",
     "pricing": {
-      "hourly": [4,3,1],
+      "hourly": [4, 3, 1],
       "flatRate": 1
     },
     "lat": 40.629287,
     "lng": 22.953491,
+    "notes": "24ωρο"
+  },
+  {
+    "name": "Δημοτικός Σταθμός Υπόγειας Στάθμευσης",
+    "address": "Λεωφ. Βασιλέως Γεωργίου",
+    "pricing": {
+      "hourly": [3.4, 0.9],
+      "flatRate": 0.9
+    },
+    "lat": 40.623096,
+    "lng": 22.954753,
+    "notes": "24ωρο"
+  },
+  {
+    "name": "Parking ΧΑΝΘ",
+    "address": "Ιωάννου Τσιμισκή 138",
+    "pricing": {
+      "hourly": [5, 2, 1, 1],
+      "flatRate": 0.5
+    },
+    "lat": 40.627077,
+    "lng": 22.951859,
     "notes": "24ωρο"
   }
 ]
