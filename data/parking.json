@@ -2,7 +2,10 @@
   {
     "name": "Parking ΔΕΘ-HELEXPO | Ιωάννης Βελλίδης",
     "address": "Λεωφ. 3ης Σεπτεμβρίου",
-    "price 1": "€4/hr",
+    "pricing": {
+      "hourly": [4,3,1],
+      "flatRate": 1
+    }
     "lat": 40.625091,
     "lng": 22.955392,
     "notes": "24ωρο"
@@ -10,7 +13,10 @@
   {
     "name": "Parking ΔΕΘ-HELEXPO | Αγγελάκη",
     "address": "Αγγελάκη 12",
-    "price 1": "€4/hr",
+    "pricing": {
+      "hourly": [4,3,1],
+      "flatRate": 1
+    }
     "lat": 40.629287
     "lng": 22.953491,
     "notes": "24ωρο"
