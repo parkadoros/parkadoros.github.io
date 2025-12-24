@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ιδιωτικό Parking</title>
+  <title>Ιδιωτικά Parking Θεσσαλονίκης</title>
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,22 +11,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
 
   <header>
     <h1>Ιδιωτικοί Χώροι Στάθμευσης</h1>
-    <p>Διαθέσιμα parking στην πόλη</p>
+    <p>Μια σελίδα για την ευκολότερη εύρεση πάρκινγκ.</p>
   </header>
 
   <label>
-  Διάρκεια στάθμευσης (ώρες):
-  <input type="number" id="hours" value="1" min="1">
+  Επιθυμητή διάρκεια στάθμευσης (ώρες):
+  <input type="number" id="hours" value="1" min="1" class="small-input">
   </label>
 
   <main>
     <div id="parking-list"></div>
   </main>
+
+  <h2>Χάρτης</h2>
+  <div id="map" style="height: 400px; margin: 1rem 0;"></div>
 
   <footer>
     <p>© 2025 Dalampiras / Chouzouris</p>
