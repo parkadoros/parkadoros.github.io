@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Main Street Garage",
+    "address": "123 Main St",
+    "price": "€2/hour",
+    "lat": 52.5200,
+    "lng": 13.4050,
+    "notes": "Private, gated"
+  },
+  {
+    "name": "City Center Lot",
+    "address": "45 Market Square",
+    "price": "€10/day",
+    "lat": 52.5215,
+    "lng": 13.4102,
+    "notes": "24/7 access"
+  }
+]
