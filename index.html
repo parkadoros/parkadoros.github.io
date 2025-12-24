@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="el">
 <head>
-  <title>Private Parking – My City</title>
-  <style>
-    body { font-family: Arial; padding: 20px; }
-    .spot { border: 1px solid #ccc; margin: 10px 0; padding: 10px; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ιδιωτικό Parking</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <h1>Private Parking Spots</h1>
-  <div id="parking-list"></div>
 
-  <script>
-    fetch("parking.json")
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById("parking-list");
-        data.forEach(spot => {
-          const div = document.createElement("div");
-          div.className = "spot";
-          div.innerHTML = `
-            <h3>${spot.name}</h3>
-            <p>${spot.address}</p>
-            <p><strong>Price:</strong> ${spot.price}</p>
-            <p>${spot.notes}</p>
-          `;
-          container.appendChild(div);
-        });
-      });
-  </script>
+  <header>
+    <h1>Ιδιωτικοί Χώροι Στάθμευσης</h1>
+    <p>Διαθέσιμα parking στην πόλη</p>
+  </header>
+
+  <main>
+    <div id="parking-list"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 Parking Directory</p>
+  </footer>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
+
