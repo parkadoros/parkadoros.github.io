@@ -53,5 +53,16 @@
     "lat": 40.634158,
     "lng": 22.935250,
     "notes": "24ωρο"
+  },
+  {
+    "name": "Grand Parking",
+    "address": "Ναυμαχίας Λήμνου",
+    "pricing": {
+      "hourly": [2, 2],
+      "flatRate": 1.5
+    },
+    "lat": 40.636918,
+    "lng": 22.934444,
+    "notes": "24ωρο"
   }
 ]
