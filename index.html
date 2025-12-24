@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My GitHub Page</title>
+  <title>Private Parking – My City</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .spot { border: 1px solid #ccc; margin: 10px 0; padding: 10px; }
+  </style>
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <p>This is my GitHub website.</p>
+  <h1>Private Parking Spots</h1>
+  <div id="parking-list"></div>
+
+  <script>
+    fetch("parking.json")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("parking-list");
+        data.forEach(spot => {
+          const div = document.createElement("div");
+          div.className = "spot";
+          div.innerHTML = `
+            <h3>${spot.name}</h3>
+            <p>${spot.address}</p>
+            <p><strong>Price:</strong> ${spot.price}</p>
+            <p>${spot.notes}</p>
+          `;
+          container.appendChild(div);
+        });
+      });
+  </script>
 </body>
 </html>
