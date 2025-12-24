@@ -10,8 +10,17 @@ fetch("data/parking.json")
 document.getElementById("hours").addEventListener("input", renderList);
 
 function calculatePrice(pricing, hours) {
-  const cost = pricing.hourly * hours;
-  return Math.min(cost, pricing.dailyMax);
+  let total = 0;
+
+  for (let i = 0; i < hours; i++) {
+    if (i < pricing.hourlyRates.length) {
+      total += pricing.hourlyRates[i];
+    } else {
+      total += pricing.flatRate;
+    }
+  }
+
+  return total.toFixed(2);
 }
 
 function renderList() {
