@@ -13,8 +13,8 @@ function calculatePrice(pricing, hours) {
   let total = 0;
 
   for (let i = 0; i < hours; i++) {
-    if (i < pricing.hourlyRates.length) {
-      total += pricing.hourlyRates[i];
+    if (i < pricing.hourly.length) {
+      total += pricing.hourly[i];
     } else {
       total += pricing.flatRate;
     }
