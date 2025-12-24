@@ -9,6 +9,14 @@ fetch("data/parking.json")
   });
 
 
+//Button for changing colours
+const toggleInput = document.getElementById("theme-toggle");
+toggleInput.addEventListener("change", () => {
+  document.body.classList.toggle("dark");
+});
+
+
+//Map functionality
 const map = L.map("map").setView([40.6401, 22.9444], 13);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "© OpenStreetMap contributors"
@@ -42,25 +50,24 @@ function renderList() {
   markers = [];
 
   parkingData.forEach(spot => {
-    const price = calculatePrice(spot.pricing, hours);
-    const gmapsLink = `https://www.google.com/maps?q=${spot.lat},${spot.lng}`;
+  const price = calculatePrice(spot.pricing, hours);
 
-    // Add list item
-    const div = document.createElement("div");
-    div.className = "spot";
-    div.innerHTML = `<h3>${spot.name}</h3>
-                     <a href="${gmapsLink}" target="_blank">${spot.address}</a><br>
-                     <p><strong>Τιμή:</strong> €${price}</p>`;
-    list.appendChild(div);
+  // create card
+  const div = document.createElement("div");
+  div.className = "spot";
+  div.innerHTML = `
+    <div class="info">
+      <h3>${spot.name}</h3>
+      <p class="address"><a href="https://www.google.com/maps?q=${spot.lat},${spot.lng}" target="_blank">${spot.address}</a></p>
+    </div>
+    <div class="price">€${price}</div>
+  `;
+  list.appendChild(div);
 
-    // Add new marker
-    const marker = L.marker([spot.lat, spot.lng])
-      .addTo(map)
-      .bindPopup(`
-        <b>${spot.name}</b><br>
-        <a href="${gmapsLink}" target="_blank">${spot.address}</a><br>
-        Τιμή: €${price}
-      `)
-    markers.push(marker);
-  });
+  // add marker
+  const marker = L.marker([spot.lat, spot.lng])
+    .addTo(map)
+    .bindPopup(`<b>${spot.name}</b><br>${spot.address}<br>Τιμή: €${price}`);
+  markers.push(marker);
+});
 }
