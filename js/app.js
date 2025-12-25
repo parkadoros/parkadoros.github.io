@@ -16,6 +16,7 @@ toggleInput.addEventListener("change", () => {
 });
 
 
+
 //Map functionality
 const map = L.map("map").setView([40.6401, 22.9444], 13);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -24,7 +25,6 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 
 document.getElementById("hours").addEventListener("input", renderList);
-
 
 function calculatePrice(pricing, hours) {
   let total = 0;
