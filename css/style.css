@@ -30,13 +30,13 @@ body {
 
 header {
   text-align: center;
-  padding: 2rem;
+  padding: 1.2rem 1rem;
   background: var(--header-bg);
   border-bottom: 1px solid var(--card-border);
 }
 
 header h1 { margin:0; font-size:2rem; font-weight:600; }
-header p { margin-top:0.5rem; opacity:0.7; }
+header p { margin-top:0.1rem; opacity:0.7; }
 
 main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
 
@@ -113,4 +113,37 @@ body.dark .spot .address a {
   background: var(--panel-bg); /* subtle contrast in dark mode */
   border-radius: 10px;
   border: 1px solid var(--card-border); /* outline */
+}
+
+/* map button functionality*/
+.map-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px; /* pill shape */
+  text-decoration: none;
+  font-weight: 500;
+
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1.5px solid #000;
+
+  transition: background 0.2s, transform 0.2s;
+}
+
+body.dark .map-button {
+  border-color: #fff; /* white border in dark */
+}
+
+.map-button:hover {
+  transform: translateY(-1px);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+body.dark .map-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+body.map-page #map {
+  height: 80vh;
 }
