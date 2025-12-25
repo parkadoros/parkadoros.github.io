@@ -1,9 +1,10 @@
 :root {
-  --bg-color: #f7f7f8;
+  --bg-color: #f7f7f7;
   --text-color: #111;
   --header-bg: white;
   --card-bg: white;
-  --card-border: none;
+  --card-border: #ffffff;
+  --panel-bg: #f9f9f9;
   --link-color: #5fc8f1;
   --footer-color: #888;
 }
@@ -13,7 +14,8 @@ body.dark {
   --text-color: #ffffff;
   --header-bg: #1e1e1e;
   --card-bg: #1f1f1f;
-  --card-border: #2a2a2a;
+  --card-border: none;
+  --panel-bg: #181818;
   --link-color: #4fc3f7;
   --footer-color: #aaa;
 }
@@ -48,21 +50,23 @@ main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
   display: flex;
   justify-content: space-between; /* price on the right */
   align-items: flex-start;        /* move price to top */
-  padding: 0.5rem 1rem;           /* reduce vertical height */
-  border-radius: 12px;
+  padding: 0.4rem 0.8rem;           /* reduce vertical height */
+  border-radius: 10px;
   margin-bottom: 0.8rem;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
 }
 .spot:hover { transform: translateY(-3px); }
 .spot h3 { margin:0 0 0.3rem 0; font-size:1rem; }
-.spot .address { color: var(--link-color) !important; text-decoration:none; }
+.spot .address { color: var(--link-color) !important; text-decoration:none; margin: 0.15rem 0 0 0}
 .spot .price { margin-top:0; font-weight:600; }
 
 #map { height: 400px; width: 70%; margin:1rem auto; border-radius:8px; }
 @media (max-width:600px){ #map { width:95%; } }
 
 footer { text-align:center; padding:1.5rem; color: var(--footer-color); font-size:0.85rem; }
+
+
 
 /* Theme slider toggle */
 .theme-switch {
@@ -77,6 +81,7 @@ footer { text-align:center; padding:1.5rem; color: var(--footer-color); font-siz
 }
 input:checked + .slider { background-color:#4fc3f7; }
 input:checked + .slider::before { transform: translateX(24px); }
+
 
 
 /* ===== Force list link colors ===== */
@@ -95,4 +100,17 @@ body.dark .spot .address a {
 /* Hover */
 .spot .address a:hover {
   text-decoration: underline;
+}
+
+/* This is for the scrolable list */
+.list-container {
+  max-height: 400px;       /* controls list height */
+  overflow-y: auto;        /* local scrolling */
+  margin-bottom: 1.5rem;
+  padding-right: 15px;      /* avoids scrollbar overlap */
+  padding-left: 4px;      /* avoids scrollbar overlap */
+  padding-top: 4px;      /* avoids scrollbar overlap */
+  background: var(--panel-bg); /* subtle contrast in dark mode */
+  border-radius: 10px;
+  border: 1px solid var(--card-border); /* outline */
 }
