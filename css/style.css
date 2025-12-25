@@ -4,7 +4,7 @@
   --header-bg: white;
   --card-bg: white;
   --card-border: none;
-  --link-color: #1a0dab;
+  --link-color: #5fc8f1;
   --footer-color: #888;
 }
 
@@ -77,3 +77,22 @@ footer { text-align:center; padding:1.5rem; color: var(--footer-color); font-siz
 }
 input:checked + .slider { background-color:#4fc3f7; }
 input:checked + .slider::before { transform: translateX(24px); }
+
+
+/* ===== Force list link colors ===== */
+
+/* Light theme */
+.spot .address a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+/* Dark theme */
+body.dark .spot .address a {
+  color: #9adfff; /* very light blue, high contrast */
+}
+
+/* Hover */
+.spot .address a:hover {
+  text-decoration: underline;
+}
