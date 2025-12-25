@@ -16,7 +16,6 @@ toggleInput.addEventListener("change", () => {
 });
 
 
-
 //Map functionality
 const map = L.map("map").setView([40.6401, 22.9444], 13);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -67,7 +66,11 @@ function renderList() {
   // add marker
   const marker = L.marker([spot.lat, spot.lng])
     .addTo(map)
-    .bindPopup(`<b>${spot.name}</b><br>${spot.address}<br>Τιμή: €${price}`);
+    .bindPopup(`<b>${spot.name}</b><br>
+      <a href="https://www.google.com/maps?q=${spot.lat},${spot.lng}" 
+        target="_blank">
+        ${spot.address}</a><br>
+      Τιμή: €${price}`);
   markers.push(marker);
 });
 }
