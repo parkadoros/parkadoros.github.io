@@ -68,7 +68,7 @@ function renderList() {
     className: "price-marker",
     html: `€${price}`,
     iconSize: [40, 24],
-    iconAnchor: [27, 35]
+    iconAnchor: [28, 39]
   });
 
   const marker = L.marker([spot.lat, spot.lng], { icon: priceIcon })
