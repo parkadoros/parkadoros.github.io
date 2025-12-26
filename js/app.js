@@ -64,13 +64,36 @@ function renderList() {
   list.appendChild(div);
 
   // add marker
-  const marker = L.marker([spot.lat, spot.lng])
+  const priceIcon = L.divIcon({
+    className: "price-marker",
+    html: `€${price}`,
+    iconSize: [40, 24],
+    iconAnchor: [27, 35]
+  });
+
+  const marker = L.marker([spot.lat, spot.lng], { icon: priceIcon })
     .addTo(map)
     .bindPopup(`<b>${spot.name}</b><br>
-      <a href="https://www.google.com/maps?q=${spot.lat},${spot.lng}" 
-        target="_blank">
-        ${spot.address}</a><br>
-      Τιμή: €${price}`);
+                <a href="https://www.google.com/maps?q=${spot.lat},${spot.lng}" target="_blank">
+                ${spot.address}
+                </a><br>
+                Τιμή: €${price}`,
+  );
+
+  marker.on("popupopen", () => {
+    document.querySelectorAll(".price-marker").forEach(el => {
+      el.style.opacity = "0.4";
+    });
+    marker.getElement().style.display = "none";
+  });
+
+  marker.on("popupclose", () => {
+    document.querySelectorAll(".price-marker").forEach(el => {
+      el.style.opacity = "1";
+    });
+    marker.getElement().style.display = "";
+  });
+
   markers.push(marker);
-});
+  });
 }

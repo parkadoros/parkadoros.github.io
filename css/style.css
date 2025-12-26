@@ -147,3 +147,46 @@ body.dark .map-button:hover {
 body.map-page #map {
   height: 80vh;
 }
+
+/* Marker for prices on map */
+.price-marker {
+  position: relative;
+  background: #111;
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 999px;
+  border: 1.5px solid #000;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+/* symmetric pointer */
+.price-marker::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #111;
+}
+
+.price-marker:hover {
+  transform: scale(1.05);
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background: #111 !important;
+  color: #fff;
+  border-radius: 14px;
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  background: #111 !important;
+}
