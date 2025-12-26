@@ -58,6 +58,18 @@
     "lng": 22.935250,
     "notes": "24ωρο"
   },
+
+  {
+    "name": "Parking Πλατεία",
+    "address": "Βασιλέως Ηρακλείου 40",
+    "pricing": {
+      "hourly": [5, 4, 2],
+      "flatRate": 1
+    },
+    "lat": 40.633504,
+    "lng": 22.943532,
+    "notes": "24ωρο"
+  },
   
   {
     "name": "Grand Parking",

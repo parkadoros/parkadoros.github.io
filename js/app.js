@@ -48,6 +48,7 @@ function renderList() {
   markers.forEach(marker => map.removeLayer(marker));
   markers = [];
 
+  console.log("Parking entries loaded:", parkingData.length);
   parkingData.forEach(spot => {
   const price = calculatePrice(spot.pricing, hours);
 
